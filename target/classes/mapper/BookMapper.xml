@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.phn.bookhouse.dao.BookDao">
+	<!-- 新增记录 -->
+	<insert id="insertBook" parameterType="Book" useGeneratedKeys="true"  keyProperty="book_id">
+		insert
+		into
+		book(book_name,book_author,book_isbn,book_publish_company,book_publish_datetime,book_author_introduce,book_catalogue,book_picture,book_parameter,book_content_introduce,book_price,book_hous_id,book_type,book_sum,book_sale_sum,book_status,book_score,book_sale_comment_sum)
+		values(#{book_name},#{book_author},#{book_isbn},#{book_publish_company},#{book_publish_datetime},#{book_author_introduce},#{book_catalogue},#{book_picture},#{book_parameter},#{book_content_introduce},#{book_price},#{book_hous_id},#{book_type},#{book_sum},#{book_sale_sum},#{book_status},#{book_score},#{book_sale_comment_sum})
+	</insert>
+	<update id="upBookImg" parameterType="Book">
+		update book set
+		book_picture=#{book_picture}
+		where book_id = #{book_id}
+	</update>
+	<update id="updateBookSaleSum" parameterType="long">
+		update book set
+		book_sale_sum=(book_sale_sum+#{order_sum}),book_sum=(book_sum-#{order_sum}) where book_id= #{book_id};
+	</update>
+	<resultMap type="Book" id="BookList">
+	</resultMap>
+	<!-- 分页查询测试 -->
+	<select id="selectHouseBookListPage" parameterType="java.util.Map"
+		resultMap="BookList" resultType="Book">
+		select * from book where
+		book_hous_id=#{house_id} and
+		book_status=#{book_status} order by
+		book_id desc
+	</select>
+	<!-- 删除记录 -->
+	<delete id="deleteBookById" parameterType="long">
+		delete from book where
+		book_id = #{bookid}
+	</delete>
+	<!-- 查询单条记录 -->
+	<select id="selectBookByName" parameterType="Book" resultType="Book">
+		select * from book where book_name like '%${book_name}%' order by book_sale_sum desc
+	</select>
+	<select id="selectBookByType" parameterType="Book" resultType="Book">
+		select book_id,book_name,book_price,book_picture,book_sale_sum from book where book_type like #{book_type}
+	</select>
+	<select id="selectBookById" parameterType="long" resultType="Book">
+		select * from book where book_id = #{bookid}
+	</select>
+	<select id="selectBookBySale" resultType="Book">
+		select * from book  order by book_sale_sum desc limit 3
+	</select>
+	<select id="selectBookByHouseId" parameterType="long"
+		resultType="Book">
+		select * from book where book_hous_id = #{bookhouseid}
+	</select>
+	<select id="selectBookByISBN" parameterType="String" resultType="Book">
+		select * from book where book_isbn = #{bookisbn}
+	</select>
+	<!-- 修改记录 -->
+	<update id="updownBookStatus" parameterType="Book">
+		update Book set
+		book_status=#{book_status}
+		where book_id = #{book_id}
+	</update>
+	<update id="updateBookScore" parameterType="Book" >
+		update Book set
+		book_score=#{book_score},
+		book_sale_comment_sum=#{book_sale_comment_sum}
+		where book_id = #{book_id}
+	</update>
+	<update id="updateBook" parameterType="Book">
+		update Book set
+		book_name=#{book_name},
+		book_author=#{book_author},
+		book_isbn=#{book_isbn},
+		book_publish_company=#{book_publish_company},
+		book_publish_datetime=#{book_publish_datetime},
+		book_author_introduce=#{book_author_introduce},
+		book_catalogue=#{book_catalogue},
+		book_pictur=#{book_picture},
+		book_parameter=#{book_parameter},
+		book_content_introduce=#{book_content_introduce},
+		book_price=#{book_price},
+		book_hous_id=#{book_hous_id},
+		book_type=#{book_type},
+		book_sum=#{book_sum},
+		book_status=#{book_status}
+		where book_id = #{book_id}
+	</update>
+	<!-- 分页查询测试 -->
+	<select id="selectBookListPage" parameterType="int" resultType="Book">
+		select * from book where book_status=#{book_status} order by book_id
+		desc
+	</select>
+
+</mapper>

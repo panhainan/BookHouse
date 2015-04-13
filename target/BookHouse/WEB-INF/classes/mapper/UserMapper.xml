@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.phn.bookhouse.dao.UserDao">
+	<!-- 新增记录 -->
+	<insert id="insertUser" parameterType="User" keyProperty="user_id">
+		insert into admin(admi_login_name,admi_login_password)
+		values(#{admi_login_name},#{admi_login_password})
+	</insert>
+
+</mapper>

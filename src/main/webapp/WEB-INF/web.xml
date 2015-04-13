@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<welcome-file-list>
+		<welcome-file>/WEB-INF/jsp/index.jsp</welcome-file>
+	</welcome-file-list>
+	<display-name>Archetype Created Web Application</display-name>
+	<!-- 读取spring配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring-mybatis.xml;classpath:spring.xml</param-value>
+	</context-param>
+	<!-- 设计日志路径变量值 -->
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>springmvc.root</param-value>
+	</context-param>
+	<!-- Spring字符集过滤器 -->
+	<filter>
+		<filter-name>SpringEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SpringEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 日志记录 -->
+	<context-param>
+		<!-- 日志配置文件路径 -->
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log4j.properties</param-value>
+	</context-param>
+	<context-param>
+		<!-- 日志页面的刷新间隔 -->
+		<param-name>log4jRefreshInterval</param-name>
+		<param-value>6000</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- springMVC核心配置 -->
+	<servlet>
+		<servlet-name>springMVC</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:springMVC-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springMVC</servlet-name>
+		<url-pattern>*.htm</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 错误跳转页面 -->
+	<error-page>
+		<!-- 路径不正确 -->
+		<error-code>404</error-code>
+		<location>/WEB-INF/jsp/errorpage/404.jsp</location>
+	</error-page>
+	<error-page>
+		<!-- 没有访问权限，访问被禁止 -->
+		<error-code>405</error-code>
+		<location>/WEB-INF/jsp/errorpage/405.jsp</location>
+	</error-page>
+	<error-page>
+		<!-- 内部错误 -->
+		<error-code>500</error-code>
+		<location>/WEB-INF/jsp/errorpage/500.jsp</location>
+	</error-page>
+</web-app>

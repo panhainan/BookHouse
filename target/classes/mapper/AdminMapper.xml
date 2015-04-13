@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.phn.bookhouse.dao.AdminDao">
+	<!-- 新增记录 -->
+	<insert id="insertAdmin" parameterType="Admin" keyProperty="admi_id">
+		insert into admin(admi_login_name,admi_login_password)
+		values(#{admi_login_name},#{admi_login_password})
+	</insert>
+	<!-- 删除记录 -->
+	<delete id="deleteAdminById" parameterType="int">
+		delete from admin where
+		admi_id = #{adminid}
+	</delete>
+	<!-- 查询单条记录 -->
+	<select id="selectAdminByName" parameterType="String"
+		resultType="Admin">
+		select * from admin where admi_login_name = #{adminname}
+	</select>
+	<select id="selectAdminById" parameterType="int" resultType="Admin">
+		select * from admin where admi_id = #{adminid}
+	</select>
+	<!-- 修改记录 -->
+	<update id="updateAdmin" parameterType="Admin">
+		update admin set
+		admi_login_name = #{admi_login_name},admi_login_password =
+		#{admi_login_password} where admi_id = #{admi_id}
+	</update>
+	<!-- 查询所有记录，查询多条记录即返回结果是一个集合的时候，resultType不是集合类型，而是集合所包含的类型 -->
+	<!-- <select id="selectAll" resultType="Admin"> select * from t_blog </select> -->
+	<!-- 模糊查询 -->
+	<!--<select id="fuzzyQuery" resultType="Admin" parameterType="java.lang.String"> 
+		select * from t_blog where title like "%"#{title}"%" </select> -->
+
+</mapper>

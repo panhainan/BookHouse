@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.phn.bookhouse.dao.TypeDao">
+	
+	<!-- 新增记录 -->
+	<insert id="insertType" parameterType="Type" keyProperty="type_id">
+		insert
+		into
+		type(type_name,type_father_id)
+		values(#{type_name},#{type_father_id})
+	</insert>
+	<!-- 删除记录 -->
+	<delete id="deleteTypeById" parameterType="int">
+		delete from type where
+		type_id = #{typeid}
+	</delete>
+	<!-- 查询单条记录 -->
+	<select id="selectTypeByName" parameterType="String" resultType="Type">
+		select * from type where type_name = #{typename}
+	</select>
+	<select id="selectTypeById" parameterType="int" resultType="Type">
+		select * from type where type_id = #{typeid}
+	</select>
+	<select id="selectTypeByFatherId" parameterType="int" resultType="Type">
+		select * from type where type_father_id = #{typefatherid}
+	</select>
+	
+	<!-- 修改记录 -->
+	<update id="updateType" parameterType="Type">
+		update type set
+		type_name=#{type_name}
+		where type_id
+		= #{type_id}
+	</update>
+
+</mapper>

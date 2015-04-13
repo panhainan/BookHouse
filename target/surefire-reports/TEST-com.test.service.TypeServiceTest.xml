@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.586" errors="1" skipped="0" tests="1" name="com.test.service.TypeServiceTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.7.0_67\jre\bin"/>
+    <property name="java.vm.version" value="24.65-b04"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp"/>
+    <property name="java.runtime.version" value="1.7.0_67-b01"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="D:\Program Files\Java\jdk1.7.0_67\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\pan\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8"/>
+    <property name="classworlds.conf" value="E:\Workspaces\SpringMVC2014\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2459371923145598910.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\Program Files\Java\jdk1.7.0_67\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;D:\Program Files\Java\jdk1.7.0_67\bin;D:\Program Files\Java\jdk1.7.0_67\jre\bin;D:\WORK\maven\apache-maven-3.2.3\bin;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.2"/>
+    <property name="user.home" value="C:\Users\pan"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="pan"/>
+    <property name="java.class.path" value="D:\WORK\maven\apache-maven-3.2.3\boot\plexus-classworlds-2.5.1.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\Program Files\Java\jdk1.7.0_67\jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -B -s D:\WORK\maven\apache-maven-3.2.3\conf\settings.xml install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_67"/>
+    <property name="java.ext.dirs" value="D:\Program Files\Java\jdk1.7.0_67\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\Program Files\Java\jdk1.7.0_67\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_67\jre\lib\rt.jar;D:\Program Files\Java\jdk1.7.0_67\jre\lib\sunrsasign.jar;D:\Program Files\Java\jdk1.7.0_67\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_67\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_67\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_67\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_67\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\WORK\maven\apache-maven-3.2.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="maven.bootclasspath" value="D:\WORK\maven\apache-maven-3.2.3\boot\plexus-classworlds-2.5.1.jar"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0.586" classname="com.test.service.TypeServiceTest" name="testAddType">
+    <error message="Unresolved compilation problem: 
+	The method addType(Type) of type TypeServiceImpl must override a superclass method
+" type="java.lang.Error">java.lang.Error: Unresolved compilation problem: 
+	The method addType(Type) of type TypeServiceImpl must override a superclass method
+
+	at com.phn.bookhouse.service.impl.TypeServiceImpl.addType(TypeServiceImpl.java:27)
+	at com.test.service.TypeServiceTest.testAddType(TypeServiceTest.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>2014-11-15 15:34:01 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Initializing new StandardEnvironment
+2014-11-15 15:34:01 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Adding [systemProperties] PropertySource with lowest search precedence
+2014-11-15 15:34:01 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Adding [systemEnvironment] PropertySource with lowest search precedence
+2014-11-15 15:34:01 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2014-11-15 15:34:01 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@13982a0a: startup date [Sat Nov 15 15:34:01 CST 2014]; root of context hierarchy
+2014-11-15 15:34:01 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Initializing new StandardEnvironment
+2014-11-15 15:34:01 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Adding [systemProperties] PropertySource with lowest search precedence
+2014-11-15 15:34:01 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Adding [systemEnvironment] PropertySource with lowest search precedence
+2014-11-15 15:34:01 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2014-11-15 15:34:01 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring.xml]
+2014-11-15 15:34:01 [org.springframework.beans.factory.xml.DefaultDocumentLoader]-[DEBUG] Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2014-11-15 15:34:01 [org.springframework.beans.factory.xml.PluggableSchemaResolver]-[DEBUG] Trying to resolve XML entity with public id [null] and system id [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd]
+2014-11-15 15:34:01 [org.springframework.beans.factory.xml.PluggableSchemaResolver]-[DEBUG] Loading schema mappings from [META-INF/spring.schemas]
+2014-11-15 15:34:01 [org.springframework.beans.factory.xml.PluggableSchemaResolver]-[DEBUG] Loaded schema mappings: {http://mybatis.org/schema/mybatis-spring-1.2.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://mybatis.org/schema/mybatis-spring.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd=org/springframework/oxm/config/spring-oxm-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+2014-11-15 15:34:01 [org.springframework.beans.factory.xml.PluggableSchemaResolver]-[DEBUG] Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+2014-11-15 15:34:01 [org.springframework.beans.factory.xml.PluggableSchemaResolver]-[DEBUG] Trying to resolve XML entity with public id [null] and system id [http://www.springframework.org/schema/context/spring-context.xsd]
+2014-11-15 15:34:01 [org.springframework.beans.factory.xml.PluggableSchemaResolver]-[DEBUG] Found XML schema [http://www.springframework.org/schema/context/spring-context.xsd] in classpath: org/springframework/context/config/spring-context-3.2.xsd
+2014-11-15 15:34:01 [org.springframework.beans.factory.xml.PluggableSchemaResolver]-[DEBUG] Trying to resolve XML entity with public id [null] and system id [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd]
+2014-11-15 15:34:01 [org.springframework.beans.factory.xml.PluggableSchemaResolver]-[DEBUG] Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.2.xsd
+2014-11-15 15:34:02 [org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader]-[DEBUG] Loading bean definitions
+2014-11-15 15:34:02 [org.springframework.beans.factory.xml.DefaultNamespaceHandlerResolver]-[DEBUG] Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://mybatis.org/schema/mybatis-spring=org.mybatis.spring.config.NamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+2014-11-15 15:34:02 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Initializing new StandardEnvironment
+2014-11-15 15:34:02 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Adding [systemProperties] PropertySource with lowest search precedence
+2014-11-15 15:34:02 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Adding [systemEnvironment] PropertySource with lowest search precedence
+2014-11-15 15:34:02 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2014-11-15 15:34:02 [org.springframework.core.io.support.PathMatchingResourcePatternResolver]-[DEBUG] Looking for matching resources in directory tree [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service]
+2014-11-15 15:34:02 [org.springframework.core.io.support.PathMatchingResourcePatternResolver]-[DEBUG] Searching directory [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service] for files matching pattern [E:/Workspaces/SpringMVC2014/BookHouse Maven Webapp/target/classes/com/phn/bookhouse/service/**/*.class]
+2014-11-15 15:34:02 [org.springframework.core.io.support.PathMatchingResourcePatternResolver]-[DEBUG] Searching directory [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl] for files matching pattern [E:/Workspaces/SpringMVC2014/BookHouse Maven Webapp/target/classes/com/phn/bookhouse/service/**/*.class]
+2014-11-15 15:34:02 [org.springframework.core.io.support.PathMatchingResourcePatternResolver]-[DEBUG] Resolved location pattern [classpath*:com/phn/bookhouse/service/**/*.class] to resources [file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\AdminService.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\BookService.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\HouseService.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\AdminServiceImpl.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\BookServiceImpl.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\HouseServiceImpl.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\TypeServiceImpl.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\UserServiceImpl.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\TypeService.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\UserService.class]]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\AdminService.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Ignored because not matching any filter: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\AdminService.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\BookService.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Ignored because not matching any filter: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\BookService.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\HouseService.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Ignored because not matching any filter: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\HouseService.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\AdminServiceImpl.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Identified candidate component class: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\AdminServiceImpl.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\BookServiceImpl.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Identified candidate component class: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\BookServiceImpl.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\HouseServiceImpl.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Identified candidate component class: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\HouseServiceImpl.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\TypeServiceImpl.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Identified candidate component class: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\TypeServiceImpl.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\UserServiceImpl.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Identified candidate component class: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\impl\UserServiceImpl.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\TypeService.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Ignored because not matching any filter: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\TypeService.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\UserService.class]
+2014-11-15 15:34:02 [org.springframework.context.annotation.ClassPathBeanDefinitionScanner]-[DEBUG] Ignored because not matching any filter: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\service\UserService.class]
+2014-11-15 15:34:02 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[DEBUG] Loaded 10 bean definitions from location pattern [classpath:spring.xml]
+2014-11-15 15:34:02 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2014-11-15 15:34:02 [org.springframework.beans.factory.xml.DefaultDocumentLoader]-[DEBUG] Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2014-11-15 15:34:02 [org.springframework.beans.factory.xml.PluggableSchemaResolver]-[DEBUG] Trying to resolve XML entity with public id [null] and system id [http://www.springframework.org/schema/beans/spring-beans-3.2.xsd]
+2014-11-15 15:34:02 [org.springframework.beans.factory.xml.PluggableSchemaResolver]-[DEBUG] Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.2.xsd
+2014-11-15 15:34:02 [org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader]-[DEBUG] Loading bean definitions
+2014-11-15 15:34:02 [org.springframework.beans.factory.xml.BeanDefinitionParserDelegate]-[DEBUG] Neither XML &apos;id&apos; nor &apos;name&apos; specified - using generated bean name [org.mybatis.spring.mapper.MapperScannerConfigurer#0]
+2014-11-15 15:34:02 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[DEBUG] Loaded 4 bean definitions from location pattern [classpath:spring-mybatis.xml]
+2014-11-15 15:34:02 [org.springframework.context.support.ClassPathXmlApplicationContext]-[DEBUG] Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@13982a0a: org.springframework.beans.factory.support.DefaultListableBeanFactory@41544701: defining beans [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,adminService,bookService,houseService,typeService,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager]; root of factory hierarchy
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Invoking afterPropertiesSet() on bean with name &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Initializing new StandardEnvironment
+2014-11-15 15:34:02 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Adding [systemProperties] PropertySource with lowest search precedence
+2014-11-15 15:34:02 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Adding [systemEnvironment] PropertySource with lowest search precedence
+2014-11-15 15:34:02 [org.springframework.core.env.StandardEnvironment]-[DEBUG] Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2014-11-15 15:34:02 [org.springframework.core.io.support.PathMatchingResourcePatternResolver]-[DEBUG] Looking for matching resources in directory tree [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao]
+2014-11-15 15:34:02 [org.springframework.core.io.support.PathMatchingResourcePatternResolver]-[DEBUG] Searching directory [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao] for files matching pattern [E:/Workspaces/SpringMVC2014/BookHouse Maven Webapp/target/classes/com/phn/bookhouse/dao/**/*.class]
+2014-11-15 15:34:02 [org.springframework.core.io.support.PathMatchingResourcePatternResolver]-[DEBUG] Resolved location pattern [classpath*:com/phn/bookhouse/dao/**/*.class] to resources [file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\AdminDao.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\BookDao.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\HouseDao.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\TypeDao.class], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\UserDao.class]]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\AdminDao.class]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Identified candidate component class: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\AdminDao.class]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\BookDao.class]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Identified candidate component class: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\BookDao.class]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\HouseDao.class]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Identified candidate component class: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\HouseDao.class]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\TypeDao.class]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Identified candidate component class: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\TypeDao.class]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Scanning file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\UserDao.class]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Identified candidate component class: file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\com\phn\bookhouse\dao\UserDao.class]
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Creating MapperFactoryBean with name &apos;adminDao&apos; and &apos;com.phn.bookhouse.dao.AdminDao&apos; mapperInterface
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Creating MapperFactoryBean with name &apos;bookDao&apos; and &apos;com.phn.bookhouse.dao.BookDao&apos; mapperInterface
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Creating MapperFactoryBean with name &apos;houseDao&apos; and &apos;com.phn.bookhouse.dao.HouseDao&apos; mapperInterface
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Creating MapperFactoryBean with name &apos;typeDao&apos; and &apos;com.phn.bookhouse.dao.TypeDao&apos; mapperInterface
+2014-11-15 15:34:02 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[DEBUG] Creating MapperFactoryBean with name &apos;userDao&apos; and &apos;com.phn.bookhouse.dao.UserDao&apos; mapperInterface
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.MutablePropertySources]-[DEBUG] Adding [environmentProperties] PropertySource with lowest search precedence
+2014-11-15 15:34:02 [org.springframework.context.support.PropertySourcesPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [jdbc.properties]
+2014-11-15 15:34:02 [org.springframework.core.env.MutablePropertySources]-[DEBUG] Adding [localProperties] PropertySource with lowest search precedence
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] getProperty(&quot;jdbc_driverClassName&quot;, String)
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_driverClassName&apos; in [environmentProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] getProperty(&quot;jdbc_driverClassName&quot;, String)
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_driverClassName&apos; in [systemProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_driverClassName&apos; in [systemEnvironment]
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;jdbc_driverClassName&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;JDBC_DRIVERCLASSNAME&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Could not find key &apos;jdbc_driverClassName&apos; in any property source. Returning [null]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_driverClassName&apos; in [localProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Found key &apos;jdbc_driverClassName&apos; in [localProperties] with type [String] and value &apos;com.mysql.jdbc.Driver&apos;
+2014-11-15 15:34:02 [org.springframework.util.PropertyPlaceholderHelper]-[DEBUG] Resolved placeholder &apos;jdbc_driverClassName&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] getProperty(&quot;jdbc_url&quot;, String)
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_url&apos; in [environmentProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] getProperty(&quot;jdbc_url&quot;, String)
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_url&apos; in [systemProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_url&apos; in [systemEnvironment]
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;jdbc_url&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;JDBC_URL&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Could not find key &apos;jdbc_url&apos; in any property source. Returning [null]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_url&apos; in [localProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Found key &apos;jdbc_url&apos; in [localProperties] with type [String] and value &apos;jdbc:mysql://localhost:3306/bookhouse?useUnicode=true&amp;amp;characterEncoding=utf-8&apos;
+2014-11-15 15:34:02 [org.springframework.util.PropertyPlaceholderHelper]-[DEBUG] Resolved placeholder &apos;jdbc_url&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] getProperty(&quot;jdbc_username&quot;, String)
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_username&apos; in [environmentProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] getProperty(&quot;jdbc_username&quot;, String)
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_username&apos; in [systemProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_username&apos; in [systemEnvironment]
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;jdbc_username&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;JDBC_USERNAME&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Could not find key &apos;jdbc_username&apos; in any property source. Returning [null]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_username&apos; in [localProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Found key &apos;jdbc_username&apos; in [localProperties] with type [String] and value &apos;root&apos;
+2014-11-15 15:34:02 [org.springframework.util.PropertyPlaceholderHelper]-[DEBUG] Resolved placeholder &apos;jdbc_username&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] getProperty(&quot;jdbc_password&quot;, String)
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_password&apos; in [environmentProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] getProperty(&quot;jdbc_password&quot;, String)
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_password&apos; in [systemProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_password&apos; in [systemEnvironment]
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;jdbc_password&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;JDBC_PASSWORD&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Could not find key &apos;jdbc_password&apos; in any property source. Returning [null]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;jdbc_password&apos; in [localProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Found key &apos;jdbc_password&apos; in [localProperties] with type [String] and value &apos;123456&apos;
+2014-11-15 15:34:02 [org.springframework.util.PropertyPlaceholderHelper]-[DEBUG] Resolved placeholder &apos;jdbc_password&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalRequiredAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;org.springframework.context.annotation.internalRequiredAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;org.springframework.context.annotation.internalRequiredAnnotationProcessor&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;org.springframework.context.annotation.internalRequiredAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.context.support.ClassPathXmlApplicationContext]-[DEBUG] Unable to locate MessageSource with name &apos;messageSource&apos;: using default [org.springframework.context.support.DelegatingMessageSource@221cb732]
+2014-11-15 15:34:02 [org.springframework.context.support.ClassPathXmlApplicationContext]-[DEBUG] Unable to locate ApplicationEventMulticaster with name &apos;applicationEventMulticaster&apos;: using default [org.springframework.context.event.SimpleApplicationEventMulticaster@b3f451d]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[INFO] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@41544701: defining beans [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,adminService,bookService,houseService,typeService,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,adminDao,bookDao,houseDao,typeDao,userDao]; root of factory hierarchy
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;adminService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;adminService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Registered injected element on class [com.phn.bookhouse.service.impl.AdminServiceImpl]: AutowiredFieldElement for private com.phn.bookhouse.dao.AdminDao com.phn.bookhouse.service.impl.AdminServiceImpl.adminDao
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;adminService&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Processing injected method of bean &apos;adminService&apos;: AutowiredFieldElement for private com.phn.bookhouse.dao.AdminDao com.phn.bookhouse.service.impl.AdminServiceImpl.adminDao
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;adminDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;adminDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;adminDao&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [class java.lang.Class] using property editor [org.springframework.beans.propertyeditors.ClassEditor@66d278af]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;sqlSessionFactory&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;sqlSessionFactory&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;sqlSessionFactory&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [interface org.springframework.core.io.Resource] using property editor [org.springframework.core.io.ResourceEditor@3f15de6]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;dataSource&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;dataSource&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;dataSource&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6513cec9]
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6513cec9]
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [long] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@776d21f6]
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6513cec9]
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6513cec9]
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [boolean] using property editor [org.springframework.beans.propertyeditors.CustomBooleanEditor@1dd0dabb]
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6513cec9]
+2014-11-15 15:34:02 [com.alibaba.druid.pool.DruidAbstractDataSource]-[ERROR] maxIdle is deprecated
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Invoking init method  &apos;init&apos; on bean with name &apos;dataSource&apos;
+2014-11-15 15:34:02 [com.alibaba.druid.pool.DruidDataSource]-[INFO] {dataSource-2} inited
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;dataSource&apos;
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [class [Lorg.springframework.core.io.Resource;] using property editor [org.springframework.core.io.support.ResourceArrayPropertyEditor@2b938c68]
+2014-11-15 15:34:02 [org.springframework.core.io.support.PathMatchingResourcePatternResolver]-[DEBUG] Looking for matching resources in directory tree [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper]
+2014-11-15 15:34:02 [org.springframework.core.io.support.PathMatchingResourcePatternResolver]-[DEBUG] Searching directory [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper] for files matching pattern [E:/Workspaces/SpringMVC2014/BookHouse Maven Webapp/target/classes/mapper/*.xml]
+2014-11-15 15:34:02 [org.springframework.core.io.support.PathMatchingResourcePatternResolver]-[DEBUG] Resolved location pattern [classpath:mapper/*.xml] to resources [file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper\AdminMapper.xml], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper\BookMapper.xml], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper\HouseMapper.xml], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper\TypeMapper.xml], file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper\UserMapper.xml]]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Invoking afterPropertiesSet() on bean with name &apos;sqlSessionFactory&apos;
+2014-11-15 15:34:02 [org.mybatis.spring.SqlSessionFactoryBean]-[DEBUG] Parsed configuration file: &apos;class path resource [mybatis-config.xml]&apos;
+2014-11-15 15:34:02 [org.mybatis.spring.SqlSessionFactoryBean]-[DEBUG] Parsed mapper file: &apos;file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper\AdminMapper.xml]&apos;
+2014-11-15 15:34:02 [org.mybatis.spring.SqlSessionFactoryBean]-[DEBUG] Parsed mapper file: &apos;file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper\BookMapper.xml]&apos;
+2014-11-15 15:34:02 [org.mybatis.spring.SqlSessionFactoryBean]-[DEBUG] Parsed mapper file: &apos;file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper\HouseMapper.xml]&apos;
+2014-11-15 15:34:02 [org.mybatis.spring.SqlSessionFactoryBean]-[DEBUG] Parsed mapper file: &apos;file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper\TypeMapper.xml]&apos;
+2014-11-15 15:34:02 [org.mybatis.spring.SqlSessionFactoryBean]-[DEBUG] Parsed mapper file: &apos;file [E:\Workspaces\SpringMVC2014\BookHouse Maven Webapp\target\classes\mapper\UserMapper.xml]&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;sqlSessionFactory&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Invoking afterPropertiesSet() on bean with name &apos;adminDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;adminDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;bookDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;bookDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;bookDao&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [class java.lang.Class] using property editor [org.springframework.beans.propertyeditors.ClassEditor@2803cf73]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;sqlSessionFactory&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Invoking afterPropertiesSet() on bean with name &apos;bookDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;bookDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;houseDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;houseDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;houseDao&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [class java.lang.Class] using property editor [org.springframework.beans.propertyeditors.ClassEditor@12289b8b]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;sqlSessionFactory&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Invoking afterPropertiesSet() on bean with name &apos;houseDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;houseDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;typeDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;typeDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;typeDao&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [class java.lang.Class] using property editor [org.springframework.beans.propertyeditors.ClassEditor@27fbcbfd]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;sqlSessionFactory&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Invoking afterPropertiesSet() on bean with name &apos;typeDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;typeDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;userDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;userDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;userDao&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.TypeConverterDelegate]-[DEBUG] Converting String to [class java.lang.Class] using property editor [org.springframework.beans.propertyeditors.ClassEditor@40d638d]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;sqlSessionFactory&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Invoking afterPropertiesSet() on bean with name &apos;userDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;userDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;adminDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]-[DEBUG] Autowiring by type from bean name &apos;adminService&apos; to bean named &apos;adminDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;adminService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;bookService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;bookService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Registered injected element on class [com.phn.bookhouse.service.impl.BookServiceImpl]: AutowiredFieldElement for private com.phn.bookhouse.dao.BookDao com.phn.bookhouse.service.impl.BookServiceImpl.bookDao
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;bookService&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Processing injected method of bean &apos;bookService&apos;: AutowiredFieldElement for private com.phn.bookhouse.dao.BookDao com.phn.bookhouse.service.impl.BookServiceImpl.bookDao
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;bookDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]-[DEBUG] Autowiring by type from bean name &apos;bookService&apos; to bean named &apos;bookDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;bookService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;houseService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;houseService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Registered injected element on class [com.phn.bookhouse.service.impl.HouseServiceImpl]: AutowiredFieldElement for private com.phn.bookhouse.dao.HouseDao com.phn.bookhouse.service.impl.HouseServiceImpl.houseDao
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;houseService&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Processing injected method of bean &apos;houseService&apos;: AutowiredFieldElement for private com.phn.bookhouse.dao.HouseDao com.phn.bookhouse.service.impl.HouseServiceImpl.houseDao
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;houseDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]-[DEBUG] Autowiring by type from bean name &apos;houseService&apos; to bean named &apos;houseDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;houseService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;typeService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;typeService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Registered injected element on class [com.phn.bookhouse.service.impl.TypeServiceImpl]: AutowiredFieldElement for private com.phn.bookhouse.dao.TypeDao com.phn.bookhouse.service.impl.TypeServiceImpl.typeDao
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;typeService&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Processing injected method of bean &apos;typeService&apos;: AutowiredFieldElement for private com.phn.bookhouse.dao.TypeDao com.phn.bookhouse.service.impl.TypeServiceImpl.typeDao
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;typeDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]-[DEBUG] Autowiring by type from bean name &apos;typeService&apos; to bean named &apos;typeDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;typeService&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;userServiceImpl&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;userServiceImpl&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Registered injected element on class [com.phn.bookhouse.service.impl.UserServiceImpl]: AutowiredFieldElement for private com.phn.bookhouse.dao.UserDao com.phn.bookhouse.service.impl.UserServiceImpl.userDao
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;userServiceImpl&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Processing injected method of bean &apos;userServiceImpl&apos;: AutowiredFieldElement for private com.phn.bookhouse.dao.UserDao com.phn.bookhouse.service.impl.UserServiceImpl.userDao
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;userDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]-[DEBUG] Autowiring by type from bean name &apos;userServiceImpl&apos; to bean named &apos;userDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;userServiceImpl&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;org.springframework.context.annotation.internalRequiredAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;dataSource&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;sqlSessionFactory&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating shared instance of singleton bean &apos;transactionManager&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Creating instance of bean &apos;transactionManager&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean &apos;transactionManager&apos; to allow for resolving potential circular references
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;dataSource&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Invoking afterPropertiesSet() on bean with name &apos;transactionManager&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Finished creating instance of bean &apos;transactionManager&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;adminDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;bookDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;houseDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;typeDao&apos;
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;userDao&apos;
+2014-11-15 15:34:02 [org.springframework.context.support.ClassPathXmlApplicationContext]-[DEBUG] Unable to locate LifecycleProcessor with name &apos;lifecycleProcessor&apos;: using default [org.springframework.context.support.DefaultLifecycleProcessor@7b16f9cb]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;lifecycleProcessor&apos;
+2014-11-15 15:34:02 [org.springframework.context.support.ClassPathXmlApplicationContext]-[DEBUG] Publishing event in org.springframework.context.support.ClassPathXmlApplicationContext@13982a0a: org.springframework.context.event.ContextRefreshedEvent[source=org.springframework.context.support.ClassPathXmlApplicationContext@13982a0a: startup date [Sat Nov 15 15:34:01 CST 2014]; root of context hierarchy]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;sqlSessionFactory&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] getProperty(&quot;spring.liveBeansView.mbeanDomain&quot;, String)
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;spring.liveBeansView.mbeanDomain&apos; in [systemProperties]
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Searching for key &apos;spring.liveBeansView.mbeanDomain&apos; in [systemEnvironment]
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;spring.liveBeansView.mbeanDomain&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;spring_liveBeansView_mbeanDomain&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;SPRING.LIVEBEANSVIEW.MBEANDOMAIN&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.SystemEnvironmentPropertySource]-[DEBUG] PropertySource [systemEnvironment] does not contain &apos;SPRING_LIVEBEANSVIEW_MBEANDOMAIN&apos;
+2014-11-15 15:34:02 [org.springframework.core.env.PropertySourcesPropertyResolver]-[DEBUG] Could not find key &apos;spring.liveBeansView.mbeanDomain&apos; in any property source. Returning [null]
+2014-11-15 15:34:02 [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean &apos;typeService&apos;
+</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.phn.bookhouse.dao.UserDao">
+	<!-- 新增记录 -->
+	<insert id="insertUser" parameterType="User" keyProperty="user_id">
+		insert
+		into admin(admi_login_name,admi_login_password)
+		values(#{admi_login_name},#{admi_login_password})
+	</insert>
+	<select id="registJudge" parameterType="User" resultType="User">
+		select * from user where (user_login_name = #{user_login_name} or
+		user_login_email=#{user_login_email})
+	</select>
+	<insert id="regist" parameterType="User"
+		keyProperty="user_id">
+		insert into
+		user(user_login_name,user_login_password,user_login_email,user_nick_name)
+		values(#{user_login_name},#{user_login_password},#{user_login_email},#{user_login_name})
+	</insert>
+	<!-- 登录判断 -->
+	<select id="loginJudge" parameterType="User" resultType="User">
+		select *
+		from user
+		where
+		(user_login_name = #{user_login_name}
+		or
+		user_login_email
+		= #{user_login_email})
+		and
+		user_login_password = #{user_login_password}
+	</select>
+	<update id="updateUserInfo" parameterType="User">
+		update user
+		set
+		user_login_name = #{user_login_name},
+		user_login_email =
+		#{user_login_email},
+		user_sex=#{user_sex},
+		user_nick_name=#{user_nick_name}
+		where user_id=#{user_id}
+	</update>
+	<update id="updateUserPass" parameterType="User">
+		update user
+		set
+		user_login_password = #{user_login_password}
+		where user_id=#{user_id}
+	</update>
+	<update id="updateUserPic" parameterType="User">
+		update user
+		set
+		user_picture = #{user_picture}
+		where user_id=#{user_id}
+	</update>
+	<select id="selectUserById" parameterType="long" resultType="User">
+		select * from user where user_id = #{user_id}
+	</select>
+
+	<resultMap type="User" id="resultListUser">
+		<id column="user_id" property="user_id" />
+		<result column="user_login_name" property="user_login_name" />
+		<result column="user_nick_name" property="user_nick_name" />
+	</resultMap>
+
+	<resultMap id="resultUserAddress" type="Address">
+		<id property="addr_id" column="addr_id" />
+		<result property="addr_name" column="addr_name" />
+		<result property="addr_user_name" column="addr_user_name" />
+		<result property="addr_phone" column="addr_phone" />
+		<association property="user" javaType="User" resultMap="resultListUser" />
+	</resultMap>
+
+	<select id="selectUserAddress" parameterType="long" resultMap="resultUserAddress">
+		select
+		user.user_id,user.user_login_name,user.user_nick_name,
+		address.addr_id,address.addr_name,address.addr_user_name,address.addr_phone
+		from user,address
+		where user.user_id=address.addr_user_id and user.user_id=#{userid}
+	</select>
+
+
+
+
+</mapper>

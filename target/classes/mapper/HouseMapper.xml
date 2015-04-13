@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.phn.bookhouse.dao.HouseDao">
+	<!-- 查询单条记录 -->
+	<select id="selectHouseById" parameterType="long" resultType="House">
+		select * from house where hous_id = #{houseid}
+	</select>
+	<!-- 登录判断 -->
+	<select id="loginJudge" parameterType="House" resultType="House">
+		select
+		* from house where (hous_login_name = #{hous_login_name} or
+		hous_login_email=#{hous_login_email}) and hous_login_password =
+		#{hous_login_password}
+	</select>
+	<select id="registJudge" parameterType="House" resultType="House">
+		select * from house where (hous_login_name = #{hous_login_name} or
+		hous_login_email=#{hous_login_email})
+	</select>
+	<insert id="regist" parameterType="House" 
+		keyProperty="hous_id">
+		insert into
+		house(hous_login_name,hous_login_password,hous_login_email,hous_name)
+		values(#{hous_login_name},#{hous_login_password},#{hous_login_email},#{hous_login_name})
+	</insert>
+	<!-- 修改记录 -->
+	<update id="updateHouseInfo" parameterType="House">
+		update house set
+		hous_login_name = #{hous_login_name},
+		hous_login_email =
+		#{hous_login_email},
+		hous_name = #{hous_name},
+		hous_phone =
+		#{hous_phone},
+		hous_company_name = #{hous_company_name},
+		hous_company_addr = #{hous_company_addr}
+		where hous_id = #{hous_id}
+	</update>
+	<update id="updateHousePass" parameterType="House">
+		update house set
+		hous_login_password = #{hous_login_password}
+		where hous_id = #{hous_id}
+	</update>
+	<update id="updateHouseLogo" parameterType="House">
+		update house set
+		hous_logo= #{hous_logo}
+		where hous_id = #{hous_id}
+	</update>
+</mapper>

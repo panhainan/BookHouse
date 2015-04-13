@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.phn.bookhouse.dao.AddressDao">
+	<!-- 新增记录 -->
+	<insert id="insertAddress" parameterType="Address" keyProperty="addr_id">
+		insert into address(addr_user_id,addr_user_name,addr_name,addr_phone)
+		values(#{user.user_id},#{addr_user_name},#{addr_name},#{addr_phone})
+	</insert>
+	<!-- 删除记录 -->
+	<delete id="deleteAddress" parameterType="long">
+		delete from address
+		where
+		addr_id = #{addressid}
+	</delete>
+	
+	<resultMap type="Address" id="UserAddress">
+		<id property="addr_id" column="addr_id" />
+		<result property="addr_name" column="addr_name" />
+		<result property="addr_user_name" column="addr_user_name" />
+		<result property="addr_phone" column="addr_phone" />
+	</resultMap>
+	<select id="selectAddressById" parameterType="long" resultMap="UserAddress">
+		select addr_id,addr_name,addr_user_name,addr_phone from address where addr_id = #{addressid}
+	</select>
+	<select id="selectAddressByUserId" parameterType="long" resultType="Address">
+		select addr_id,addr_name,addr_user_name,addr_phone from address where addr_user_id = #{user_id}
+	</select>
+	<!-- 修改记录 -->
+	<update id="updateAddress" parameterType="Address">
+		update Address set
+		addr_user_name = #{addr_user_name},addr_name =
+		#{addr_name},addr_phone=#{addr_phone} where addr_id = #{addr_id}
+	</update>
+</mapper>

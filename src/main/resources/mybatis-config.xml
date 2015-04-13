@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 命名空间 -->
+	<typeAliases>
+		<typeAlias alias="User" type="com.phn.bookhouse.entity.User" />
+		<typeAlias alias="Admin" type="com.phn.bookhouse.entity.Admin" />
+		<typeAlias alias="House" type="com.phn.bookhouse.entity.House" />
+		<typeAlias alias="Book" type="com.phn.bookhouse.entity.Book" />
+		<typeAlias alias="Type" type="com.phn.bookhouse.entity.Type" />
+		<typeAlias alias="Order" type="com.phn.bookhouse.entity.Order" />
+		<typeAlias alias="Address" type="com.phn.bookhouse.entity.Address" />
+	</typeAliases>
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<property name="dialect" value="mysql" />
+		</plugin>
+	</plugins>
+	<!-- 映射map -->
+	<!-- 与spring 集成之后,这些可以完全删除,数据库连接的管理交给 spring 去管理 -->
+	<mappers>
+	</mappers>
+
+
+</configuration>

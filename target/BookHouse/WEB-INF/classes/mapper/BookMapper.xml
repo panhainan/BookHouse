@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.phn.bookhouse.dao.BookDao">
+	<!-- 新增记录 -->
+	<insert id="insertBook" parameterType="Book" keyProperty="book_id">
+		insert
+		into
+		Book(book_name,book_author,book_isbn,book_publish_company,book_publish_datetime,book_author_introduce,book_catalogue,book_picture,book_parameter,book_content_introduce,book_price,book_hous_id,book_type_id,book_sum,book_status)
+		values(#{book_name},#{book_author},#{book_isbn},#{book_publish_company},#{book_publish_datetime},#{book_author_introduce},#{book_catalogue},#{book_picture},#{book_parameter},#{book_content_introduce},#{book_price},#{book_hous_id},#{book_type_id},#{book_sum},#{book_status}))
+	</insert>
+	<!-- 删除记录 -->
+	<delete id="deleteBookById" parameterType="long">
+		delete from book where
+		book_id = #{bookid}
+	</delete>
+	<!-- 查询单条记录 -->
+	<select id="selectBookByName" parameterType="String" resultType="Book">
+		select * from book where book__name = #{bookname}
+	</select>
+	<select id="selectBookById" parameterType="int" resultType="Book">
+		select * from book where book_id = #{bookid}
+	</select>
+	<select id="selectBookByHouseId" parameterType="int" resultType="Book">
+		select * from book where book_hous_id = #{bookhouseid}
+	</select>
+	<!-- 修改记录 -->
+	<update id="updateBook" parameterType="Book">
+		update Book set
+		book_name=#{book_name},
+		book_author=#{book_author},
+		book_isbn=#{book_isbn},
+		book_publish_company=#{book_publish_company},
+		book_publish_datetime=#{book_publish_datetime},
+		book_author_introduce=#{book_author_introduce},
+		book_catalogue=#{book_catalogue},
+		book_pictur=#{book_picture},
+		book_parameter=#{book_parameter},
+		book_content_introduce=#{book_content_introduce},
+		book_price=#{book_price},
+		book_hous_id=#{book_hous_id},
+		book_type_id=#{book_type_id},
+		book_sum=#{book_sum},
+		book_status=#{book_status}
+		where book_id = #{book_id}
+	</update>
+	<!-- 分页查询测试 --><!-- limit #{offset},#{pagesize} -->
+	<select id="selectBookListPage"   resultType="Book">
+		select * from book
+	</select>
+</mapper>

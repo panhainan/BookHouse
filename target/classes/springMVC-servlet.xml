@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+	<!-- <mvc:annotation-driven /> --> <!-- 支持spring3.0新的mvc注解 -->
+
+	<!-- 扫描controller（controller层注入） -->
+	<context:component-scan base-package="com.phn.bookhouse.controller" />
+
+	<!-- mappingJacksonHttpMessageConverter ： 用来处理json格式转换 -->
+	<bean id="mappingJacksonHttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>application/json;charset=UTF-8</value>
+				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="mappingJacksonHttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+	<!-- 对模型视图添加前后缀 -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" /><!-- p:prefix="/WEB-INF/jsp/" -->
+
+	<!-- 拦截器 -->
+	<mvc:interceptors>
+		<!-- 多个拦截器,顺序执行 -->
+		<mvc:interceptor>
+			<!-- 如果不配置或/*,将拦截所有的Controller -->
+			<mvc:mapping path="/house/*" />
+			<mvc:mapping path="/book/*" />
+			<mvc:mapping path="/order/sendOrder.htm"/>
+			<mvc:mapping path="/order/goAllOrderByHouse.htm"/>
+			<mvc:exclude-mapping path="/house/goLogin.htm"/>
+			<mvc:exclude-mapping path="/house/regist.htm"/>
+			<mvc:exclude-mapping path="/house/login.htm"/>
+			<mvc:exclude-mapping path="/book/goAllBook.htm"/>
+			<mvc:exclude-mapping path="/book/findBookByName.htm"/>
+			<mvc:exclude-mapping path="/book/goHotBook.htm"/>
+			<mvc:exclude-mapping path="/book/findBookByType.htm"/>
+			<mvc:exclude-mapping path="/book/goTheBook.htm"/>
+			<bean class="com.phn.bookhouse.interceptor.HouseInterceptor"></bean>
+		</mvc:interceptor>
+		<!-- 多个拦截器,顺序执行 -->
+		<mvc:interceptor>
+			<!-- 如果不配置或/*,将拦截所有的Controller -->
+			<mvc:mapping path="/user/*" />
+			<mvc:mapping path="/address/*" />
+			<mvc:mapping path="/order/*" />
+			<mvc:exclude-mapping path="/user/goLogin.htm"/>
+			<mvc:exclude-mapping path="/user/login.htm"/>
+			<mvc:exclude-mapping path="/user/regist.htm"/>
+			<mvc:exclude-mapping path="/order/sendOrder.htm"/>
+			<mvc:exclude-mapping path="/order/goAllOrderByHouse.htm"/>
+			<bean class="com.phn.bookhouse.interceptor.UserInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- set the max upload size100MB -->
+		<property name="maxUploadSize">
+			<value>104857600</value>
+		</property>
+		<property name="maxInMemorySize">
+			<value>4096</value>
+		</property>
+	</bean>
+</beans>

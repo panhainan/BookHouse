@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.phn.bookhouse.dao.OrderDao">
+	<!-- 新增记录 -->
+	<insert id="insertOrder" parameterType="Order" keyProperty="orde_id">
+		insert
+		into
+		orders( orde_book_id, orde_user_id,
+		orde_book_amount,
+		orde_status, orde_datetime, orde_price)
+		values( #{orde_book.book_id},
+		#{orde_user.user_id},
+		#{orde_book_amount},
+		#{orde_status},#{orde_datetime}, #{orde_price})
+	</insert>
+
+	<resultMap type="Order" id="OrderWithBookUser">
+		<association property="orde_book" column="orde_book_id"
+			select="com.phn.bookhouse.dao.BookDao.selectBookById">
+			<result property="book_id" column="book_id" />
+			<result property="book_name" column="book_name" />
+			<result property="book_hous_id" column="book_hous_id" />
+		</association>
+		<association property="orde_user" column="orde_user_id"
+			select="com.phn.bookhouse.dao.UserDao.selectUserById">
+			<result property="user_id" column="user_id" />
+			<result property="user_nick_name" column="user_nick_name" />
+		</association>
+	</resultMap>
+	<resultMap type="Order" id="OrderWithUser">
+		<association property="orde_user" column="orde_user_id"
+			select="com.phn.bookhouse.dao.UserDao.selectUserById">
+			<result property="user_id" column="user_id" />
+			<result property="user_nick_name" column="user_nick_name" />
+			<result property="user_picture" column="user_picture" />
+		</association>
+	</resultMap>
+
+
+	<select id="selectUserOrderListPage" parameterType="java.util.Map"
+		resultMap="OrderWithBookUser">
+		select * from orders where orde_user_id=#{user_id} and
+		orde_status=#{orde_status} order by orde_id desc
+	</select>
+
+	<select id="select5UserOrderListPage" parameterType="long"
+		resultMap="OrderWithBookUser">
+		select * from orders where orde_user_id=#{user_id} and
+		(orde_status=3 or orde_status=4) order by orde_id desc
+	</select>
+
+	<select id="findOrderByStatusHouseId" parameterType="java.util.Map"
+		resultMap="OrderWithBookUser">
+		select orde_id,orde_number, orde_book_id,
+		orde_user_id,orde_book_amount, orde_status, orde_datetime, orde_price
+		from orders,book
+		where
+		orde_status=#{orde_status} and
+		book_id=orde_book_id and
+		book_hous_id=#{hosu_id}
+	</select>
+	<select id="findOrderByStatus5HouseId" parameterType="long"
+		resultMap="OrderWithBookUser">
+		select orde_id,orde_number, orde_book_id,
+		orde_user_id,orde_book_amount, orde_status, orde_datetime, orde_price
+		from orders,book
+		where
+		(orde_status=3 or orde_status=4) and
+		book_id=orde_book_id and
+		book_hous_id=#{hosu_id}
+	</select>
+	<select id="selectOrderByBookidStatus" parameterType="Order"
+		resultMap="OrderWithUser">
+		select * from orders,user where orde_book_id =
+		#{orde_book.book_id} and orde_status=#{orde_status} and orde_user_id=user_id order by orde_id
+		desc
+	</select>
+
+
+	<select id="selectOrderById" parameterType="long" resultMap="OrderWithBookUser">
+		select * from orders where orde_id = #{orderid}
+	</select>
+	<update id="updateOrderStatus" parameterType="Order">
+		update orders set
+		orde_status=#{orde_status} where orde_id=#{orde_id}
+	</update>
+
+	<update id="updateOrderWithAddr" parameterType="Order">
+		update orders set
+		orde_number=#{orde_number},orde_status=#{orde_status},orde_addr_name=#{orde_addr_name},orde_addr_user_name=#{orde_addr_user_name},orde_addr_phone=#{orde_addr_phone},orde_datetime=#{orde_datetime}
+		where orde_id=#{orde_id}
+	</update>
+	<update id="updateOrderComment" parameterType="Order">
+		update orders set
+		orde_status=#{orde_status},orde_user_comment=#{orde_user_comment},orde_user_score=#{orde_user_score}
+		where orde_id=#{orde_id}
+	</update>
+
+
+
+
+
+
+
+</mapper>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+	<!-- <mvc:annotation-driven /> --> <!-- 支持spring3.0新的mvc注解 -->
+
+	<!-- 扫描controller（controller层注入） -->
+	<context:component-scan base-package="com.phn.bookhouse.controller" />
+	<!-- 避免IE在ajax请求时，返回json出现下载 -->
+	<bean id="jacksonMessageConverter"
+		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+	<!-- <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" 
+		/> <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" 
+		/> -->
+	<!-- 对模型视图添加前后缀 -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" /><!-- p:prefix="/WEB-INF/jsp/" -->
+
+	<!-- 拦截器 -->
+	<mvc:interceptors>
+		<!-- 多个拦截器,顺序执行 -->
+		<mvc:interceptor>
+			<!-- 如果不配置或/*,将拦截所有的Controller -->
+			<mvc:mapping path="/house/goEditInfo.do" />
+			<mvc:mapping path="/house/editInfo.do" />
+			<mvc:mapping path="/house/goEditPass.do" />
+			<mvc:mapping path="/house/editPass.do" />
+			<mvc:mapping path="/book/goAddBook.do" />
+			<mvc:mapping path="/book/addBook.do" />
+			<bean class="com.phn.bookhouse.interceptor.HouseInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+</beans>
