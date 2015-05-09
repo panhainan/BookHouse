@@ -23,5 +23,5 @@
 <br/><br/><br/>
 <font color="red">注意：</font>**打开根目录里面的sql文件，在数据库软件中建一个bookhouse数据库，然后运行sql文件。还有数据库默认用户名root和密码123456，如果需要修改请到src下面修改jdbc.properties文件**
 <br/><br/><br/>
-点击查看<a href="https://github.com/panhainan/panhainan.github.io/blob/master/project/BookHouse.md" >BookHouse网上书城系统详细介绍</a>
+点击查看<a href="http://panhainan.com/2015/04/28/BookHouse%E7%BD%91%E4%B8%8A%E4%B9%A6%E5%9F%8E%E4%BB%8B%E7%BB%8D/" target="_blank" >BookHouse网上书城系统详细介绍</a>
 </font>
